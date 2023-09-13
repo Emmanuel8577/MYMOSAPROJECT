@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Signin</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-success" style="background-color:rgb(3, 83, 3);">
+        <a class="navbar-brand" href="#"><img src="\static\img\Mosam14.jpg"
+                style="width:120px; padding-left: 50px;  border-radius: 50px;" class="logo"></a>
+        <a style="color:white; font-weight: bolder;">
+            <p>MKAR OLD STUDENT'S ASSOCIATION <BR><span style="font-size: large;">(MOSA SET'014)</span></BR></p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span><a><img style="max-width:25px; justify-content: center;" src="/static/img/menu.png"></a></button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="padding-left:100px; justify-content: flex-end">
+            <ul class="navbar-nav" style="padding-left:20px 30px;font-weight: bolder;">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/event">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/dues">Dues/Donations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/contact" active>Contact Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" style="color:white; padding-left: 20px 20px; font-weight:400px"
+                        href="/members">Members</a>
+                </li>
+        </div>
+    </nav>
+</section>
+        <section>
+            <a class="row justify-content-center align-items-center" href="#"><img src="\static\img\Mosa14.jpg"
+                    class="logo"></a>
+
+            <div class="text-center">
+                <p>Signin is required, Please Signin to view Members Details</p>
+            </div>
+            <form class="col justify-content-start align-items-start" action="/Signin" method="post">
+                {% csrf_token %}
+                <div class="m-4">
+                    <label for="inputEmail4" class="form-label">Username</label>
+                    <input type="text" class="form-control" placeholder=" Enter your Username" name="User1"
+                        aria-label="Username" required>
+                </div>
+                <div class="m-4">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" name="pass1"
+                        placeholder="Enter your Password" required>
+                </div>
+                <div class="m-4">
+                    <button type="submit" class="btn btn-primary">Signin</button>
+                </div>
+                </div>
+            </form>
+        </section>
+        <section>
+            <!-- Footer -->
+        <footer class="text-center text-lg-start bg-white text-muted">
+            <section class="" style="background-color:green; color:white; margin-top:10px;">
+              <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-10">
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                      <i class="fas fa-gem me-3 text-secondary"></i>About Mosa
+                    </h6>
+                    <p>
+                        Mosa is an acronym which stands for Mkar Old Student Association,<br>
+                        It is a body that comprised of all former students who attended NKST COLLEGE MKAR, GBOKO, BENUE STATE<br> who desiring to come together in unity have wilfully established this distinguished Association <br>to cater for the needs of her Members as well as the interests of<br> our great Alma mater.
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+          
+                  <!-- Grid column -->
+                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                      Social Media Links
+                    </h6>
+                    <p>
+                      <a href="https://www.facebook.com/profile.php?id=100086390207060" class="text-reset">Facebook Page</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">Twitter</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">Instagram</a>
+                    </p>
+                    <p>
+                      <a href="#!" class="text-reset">What'sapp</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+          
+                  <!-- Grid column -->
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                      Useful links
+                    </h6>
+                    <p>
+                      <a href="/register" class="text-reset">Register</a>
+                    </p>
+                    <p>
+                      <a href="/contact" class="text-reset">Contact Us</a>
+                    </p>
+                    <p>
+                      <a href="/dues" class="text-reset">Dues/Donation</a>
+                    </p>
+                    <p>
+                      <a href="/members" class="text-reset">Members list</a>
+                    </p>
+                  </div>
+                  <!-- Grid column -->
+          
+                  <!-- Grid column -->
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p>
+                      <i class="fas fa-envelope me-3 text-secondary"></i>
+                      Mosaclass2014@gmail.com
+                    </p>
+                    <p><i class="fas fa-phone me-3 text-secondary"></i> +234 8103407323</p>
+                    <p><i class="fas fa-print me-3 text-secondary"></i> +234 9137118577</p>
+                  </div>
+                  <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+              </div>
+            </section>
+            <!-- Section: Links  -->
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: green; color:white">
+              © 2022 Copyright:
+              <a class="text-reset fw-bold" href="#!"> Mkar Old Student Association Set 2014.</a>
+            </div>
+            <p class="pt-4" style="font-size:13pt;background-color:green; color: white;">Designed by <a href="#" style="text-decoration:none; color: white;" target="_blank">Great-Mind Technologies</a></p>
+            <!-- Copyright -->
+          </footer>
+          </section>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
